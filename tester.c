@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcpy.c                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/05 21:16:34 by bschroed          #+#    #+#             */
-/*   Updated: 2017/01/05 21:16:36 by bschroed         ###   ########.fr       */
+/*   Created: 2017/01/05 21:05:44 by bschroed          #+#    #+#             */
+/*   Updated: 2017/01/05 21:05:53 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "libft.h"
+# include <stdio.h>
 
-char *strcpy(char *dst, const char *src)
-{
-	int i;
+int main() {
+	int n;
+	n = strlen("Brodie Schroeder");
 
-	if (!dst || !src)
-		return 0;
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	ft_putchar('b');
+	ft_putchar('\n');
+	ft_putstr("Brodie Schroeder");
+	ft_putchar('\n');
+	printf("%d\n", n);
+	return 0;
 }

@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bschroed <bschroed@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/05 16:51:20 by bschroed          #+#    #+#             */
-/*   Updated: 2017/01/05 16:51:25 by bschroed         ###   ########.fr       */
+/*   Created: 2017/01/06 12:02:44 by bschroed          #+#    #+#             */
+/*   Updated: 2017/01/06 12:02:46 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+# include "libft.h"
 
-/* Remove after testing?*/
-void ft_putchar(char c);
-void ft_putstr(char const *s);
-char *strcpy(char * dst, const char * src);
-size_t strlen(const char *s);
+size_t strlen(const char *s)
+{
+	size_t count;
 
-#endif
+	count = 0;
+	while (s[count] != '\0')
+		count++;
+	return (count);
+}
