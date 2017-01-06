@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bschroed <bschroed@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 17:02:53 by bschroed          #+#    #+#             */
 /*   Updated: 2017/01/05 17:05:49 by bschroed         ###   ########.fr       */
