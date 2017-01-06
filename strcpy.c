@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   strcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bschroed <bschroed@student.42.us.org>      +#+  +:+       +#+        */
+/*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/05 16:51:20 by bschroed          #+#    #+#             */
-/*   Updated: 2017/01/05 16:51:25 by bschroed         ###   ########.fr       */
+/*   Created: 2017/01/05 21:16:34 by bschroed          #+#    #+#             */
+/*   Updated: 2017/01/05 21:16:36 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+# include "libft.h"
 
-/* Remove after testing?*/
-void ft_putchar(char c);
-void ft_putstr(char const *s);
-char *strcpy(char * dst, const char * src);
+char *strcpy(char *dst, const char *src)
+{
+	int i;
 
-#endif
+	if (!dst || !src)
+		return 0;
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
+}
