@@ -30,5 +30,6 @@ clean:
 
 fclean: clean
 	/bin/rm -f $(NAME)
+	/bin/rm -f tester
 
 re: fclean all
