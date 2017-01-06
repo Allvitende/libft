@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bschroed <bschroed@student.42.us.org>      +#+  +:+       +#+        */
+/*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/05 16:51:20 by bschroed          #+#    #+#             */
-/*   Updated: 2017/01/05 16:51:25 by bschroed         ###   ########.fr       */
+/*   Created: 2017/01/05 17:28:03 by bschroed          #+#    #+#             */
+/*   Updated: 2017/01/05 17:28:04 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+# include "libft.h"
 
-/* Remove after testing?*/
-void ft_putchar(char c);
-void ft_putstr(char const *s);
+void ft_putstr(char const *s) {
+	int n;
+	n = 0;
 
-#endif
+	while(s[n] != '\0')
+	{
+		write(1, s[n], 1);
+	}
+}
