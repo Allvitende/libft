@@ -14,17 +14,19 @@
 
 void ft_putnbr(int n)
 {
-	if (n < 0)
+	long n_copy;
+
+	n_copy = n;
+	if (n_copy < 0)
 	{
 		ft_putchar('-');
-		n = -n;
+		n_copy = -n_copy;
 	}
-
-	if (n > 9)
+	if (n_copy > 9)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr(n_copy / 10);
+		ft_putnbr(n_copy % 10);
 	}
 	else
-		ft_putchar(n + '0');
+		ft_putchar(n_copy + '0');
 }

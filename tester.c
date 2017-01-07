@@ -15,7 +15,9 @@
 
 int main() {
 	int n;
-	n = strlen("Brodie Schroeder");
+	int m;
+	n = ft_strlen("Brodie Schroeder");
+	m = ft_strcmp("Brodie", "Schroeder");
 
 	printf("%s\n", "***Testing ft_putchar***");
 	ft_putchar('b');
@@ -25,6 +27,8 @@ int main() {
 	ft_putstr("Brodie Schroeder");
 	printf("\n%s\n","***Testing ft_strlen***");
 	printf("%d\n", n);
+	printf("\n%s\n","***Testing ft_strcmp***");
+	printf("%d\n", m);
 
 	return 0;
 }
