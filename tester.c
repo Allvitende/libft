@@ -28,6 +28,8 @@ int main() {
 	ft_putnbr(42);
 	printf("\n%s\n","***Testing ft_putstr***");
 	ft_putstr("Brodie Schroeder");
+	printf("\n%s\n","***Testing ft_putendl***");
+	ft_putstr("Brodie Schroederly");
 	printf("\n%s\n","***Testing ft_strlen***");
 	printf("%d", n);
 	printf("\n%s\n","***Testing ft_strcmp***");
