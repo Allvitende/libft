@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   tester.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -17,10 +17,14 @@ int main() {
 	int n;
 	n = strlen("Brodie Schroeder");
 
+	printf("%s\n", "***Testing ft_putchar***");
 	ft_putchar('b');
-	ft_putchar('\n');
+	printf("\n%s\n","***Testing ft_putnbr***");
+	ft_putnbr(42);
+	printf("\n%s\n","***Testing ft_putstr***");
 	ft_putstr("Brodie Schroeder");
-	ft_putchar('\n');
+	printf("\n%s\n","***Testing ft_strlen***");
 	printf("%d\n", n);
+
 	return 0;
 }
