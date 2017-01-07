@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-void ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	long n_copy;
 
