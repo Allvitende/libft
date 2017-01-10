@@ -14,22 +14,23 @@
 
 char *ft_strstr(const char *big, const char *little)
 {
-	char *flag;
+	char c;
+	size_t len;
 
-	flag = 0;
-	if (*little == 0)
-		return ((char *)big);
-	while (*big++ != 0)
+	c = *little++;
+	if (!c)
+		return ((char *) big);
+
+	len = ft_strlen(little);
+	while (ft_strncmp(big, little, len) != 0)
 	{
-		if (*big == *little)
+		char sc = '\0';
+		while (sc != c)
 		{
-			*flag = *little;
-			while (*big++ == *++little)
-			{
-				if (*little == 0)
-					return (flag);
-			}
+			sc = *big++;
+			if (!sc)
+				return ((char *) 0);
 		}
 	}
-	return (0);
+	return ((char *) (big - 1));
 }
