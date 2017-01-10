@@ -17,7 +17,7 @@ char *ft_strstr(const char *big, const char *little)
 	char c;
 	size_t len;
 
-	c = *little++;
+	c = little[0];
 	if (!c)
 		return ((char *) big);
 
@@ -27,9 +27,10 @@ char *ft_strstr(const char *big, const char *little)
 		char sc = '\0';
 		while (sc != c)
 		{
-			sc = *big++;
+			sc = *big;
 			if (!sc)
 				return ((char *) 0);
+			big++;
 		}
 	}
 	return ((char *) (big - 1));
