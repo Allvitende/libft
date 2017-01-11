@@ -14,24 +14,19 @@
 
 char *ft_strstr(const char *big, const char *little)
 {
-	char c;
 	size_t len;
 
-	c = little[0];
-	if (!c)
-		return ((char *) big);
-
 	len = ft_strlen(little);
-	while (ft_strncmp(big, little, len) != 0)
+	if (!*little)
+		return ((char *) big);
+	while (*big)
 	{
-		char sc = '\0';
-		while (sc != c)
+		if (*big == *little)
 		{
-			sc = *big;
-			if (!sc)
-				return ((char *) 0);
-			big++;
+			if (!ft_strncmp(big,little,len))
+				return ((char *) big);
 		}
+		big++;
 	}
-	return ((char *) (big - 1));
+	return (NULL);
 }
