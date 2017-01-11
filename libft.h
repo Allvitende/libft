@@ -15,7 +15,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-/* Remove after testing?*/
 void	ft_putchar(char c);
 void	ft_putnbr(int n);
 void	ft_putstr(char const *s);
