@@ -26,5 +26,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_isupper(int c);
 int		ft_islower(int c);
+int		ft_isdigit(int c);
+int		ft_isalpha(int c);
 
 #endif
