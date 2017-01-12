@@ -24,5 +24,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_isupper(int c);
+int		ft_islower(int c);
 
 #endif
