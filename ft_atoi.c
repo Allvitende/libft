@@ -25,6 +25,7 @@ int	ft_atoi(const char *str)
 	{
 		sign = -1;
 		str++;
+	}
 	while (ft_isdigit(*str))
 	{
 		num *= 10;
