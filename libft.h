@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 void	ft_putchar(char c);
 void	ft_putnbr(int n);
