@@ -35,7 +35,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len_a);
 char	*ft_strstr(const char *big, const char *little);
 char	*ft_strnew(size_t size);
 char	*ft_strdup(const char *s1);
-char	*ft_strcat(char *s1, const char *s2)
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *s);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
