@@ -28,6 +28,7 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl(char const *s);
+void	ft_bzero(void *s, size_t n);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strchr(const char *s, int c);
