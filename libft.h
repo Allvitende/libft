@@ -43,6 +43,7 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strequ(char const *s1, char const *s2);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_isupper(int c);
 int		ft_islower(int c);
