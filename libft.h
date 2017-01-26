@@ -31,6 +31,7 @@ void	ft_putendl(char const *s);
 void	ft_bzero(void *s, size_t n);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strchr(const char *s, int c);
