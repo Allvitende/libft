@@ -6,7 +6,7 @@
 /*   By: bschroed <bschroed@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 16:51:20 by bschroed          #+#    #+#             */
-/*   Updated: 2017/01/05 16:51:25 by bschroed         ###   ########.fr       */
+/*   Updated: 2017/01/29 03:40:21 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	ft_bzero(void *s, size_t n);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_memdel(void **ap);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strchr(const char *s, int c);
