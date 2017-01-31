@@ -6,7 +6,7 @@
 /*   By: bschroed <bschroed@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 16:51:20 by bschroed          #+#    #+#             */
-/*   Updated: 2017/01/30 00:43:39 by bschroed         ###   ########.fr       */
+/*   Updated: 2017/01/31 02:20:04 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <string.h>
 
 void	ft_putchar(char c);
 void	ft_putnbr(int n);
