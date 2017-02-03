@@ -6,7 +6,7 @@
 /*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/12 00:29:56 by bschroed          #+#    #+#             */
-/*   Updated: 2017/01/12 00:29:57 by bschroed         ###   ########.fr       */
+/*   Updated: 2017/02/03 11:01:04 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int num;
-	int sign;
+	unsigned long long	num;
+	int					sign;
 
 	num = 0;
 	sign = 1;
@@ -32,5 +32,7 @@ int	ft_atoi(const char *str)
 		num = num + (*str - '0');
 		str++;
 	}
+	if (num >= 9223372036854775808ULL)
+		return (sign == 1 ? -1 : 0);
 	return (num * sign);
 }

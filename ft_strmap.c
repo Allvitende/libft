@@ -6,7 +6,7 @@
 /*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 02:23:31 by bschroed          #+#    #+#             */
-/*   Updated: 2017/01/29 03:48:12 by bschroed         ###   ########.fr       */
+/*   Updated: 2017/02/03 10:49:29 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmap(const char *s, char (*f)(char))
 	char	*dst;
 	size_t	size;
 
+	if (!s)
+		return (NULL);
 	size = ft_strlen(s) + 1;
 	dst = (char *)malloc(sizeof(char) * size);
 	if (!dst)

@@ -1,60 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/29 23:02:58 by bschroed          #+#    #+#             */
-/*   Updated: 2017/02/03 10:33:20 by bschroed         ###   ########.fr       */
+/*   Created: 2017/01/31 21:58:07 by bschroed          #+#    #+#             */
+/*   Updated: 2017/02/03 10:46:11 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	trimfront(char const *s)
+static	size_t	wordsize(char const *s, char c)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+	while (s[i] != c && s[i] != '\0')
 		i++;
 	return (i);
 }
 
-static	size_t	trimback(char const *s)
+char			**ft_strsplit(char const *s, char c)
 {
-	size_t j;
-
-	j = ft_strlen(s) - 1;
-	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
-		j--;
-	return (j);
-}
-
-char			*ft_strtrim(char const *s)
-{
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	char	*ret;
+	size_t	len;
+	int		i;
+	char	**ret;
+	int		words;
 
 	if (!s)
 		return (NULL);
-	i = trimfront(s);
-	j = trimback(s);
-	k = 0;
-	if (s[i] == '\0')
-		return ("\0");
-	ret = (char *)malloc(sizeof(char) * ((j - i) + 2));
-	if (!ret)
+	i = 0;
+	words = ft_wordcount(s, c);
+	if (!(ret = (char **)malloc(sizeof(char *) * (words + 1))))
 		return (NULL);
-	while (j >= i)
+	while (words--)
 	{
-		ret[k] = s[i];
-		k++;
+		while (*s != '\0' && *s == c)
+			s++;
+		len = wordsize(s, c);
+		ret[i] = ft_strsub(s, 0, len);
+		if (ret[i] == '\0')
+			return (NULL);
+		s = s + wordsize(s, c);
 		i++;
 	}
-	ret[k] = '\0';
+	ret[i] = NULL;
 	return (ret);
 }
