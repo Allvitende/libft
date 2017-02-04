@@ -6,7 +6,7 @@
 #    By: bschroed <bschroed@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/05 14:04:01 by bschroed          #+#    #+#              #
-#    Updated: 2017/02/03 10:15:12 by bschroed         ###   ########.fr        #
+#    Updated: 2017/02/03 12:47:09 by bschroed         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,15 @@ SRC := ft_islower.c \
 					ft_strtrim.c \
 					ft_strsplit.c \
 					ft_wordcount.c \
+					ft_nbrlen.c \
+					ft_itoa.c \
+					ft_lstnew.c \
+					ft_lstdel.c \
+					ft_lstdelone.c \
+					ft_lstadd.c \
+					ft_lstiter.c \
+					ft_lstmap.c \
+					ft_lstaddend.c \
 					ft_atoi.c
 
 OBJ = $(SRC:.c=.o)
