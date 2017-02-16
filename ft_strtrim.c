@@ -6,7 +6,7 @@
 /*   By: bschroed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/29 23:02:58 by bschroed          #+#    #+#             */
-/*   Updated: 2017/02/05 13:06:59 by bschroed         ###   ########.fr       */
+/*   Updated: 2017/02/06 16:47:36 by bschroed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,16 @@ static	size_t	trimback(char const *s)
 	return (j);
 }
 
+static	char	*retnull(void)
+{
+	char *ret;
+
+	if (!(ret = (char *)malloc(sizeof(char))))
+		return (NULL);
+	*ret = '\0';
+	return (ret);
+}
+
 char			*ft_strtrim(char const *s)
 {
 	size_t	i;
@@ -45,7 +55,7 @@ char			*ft_strtrim(char const *s)
 	j = trimback(s);
 	k = 0;
 	if (s[i] == '\0')
-		return ("\0");
+		return (retnull());
 	ret = (char *)malloc(sizeof(char) * ((j - i) + 2));
 	if (!ret)
 		return (NULL);

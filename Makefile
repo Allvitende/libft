@@ -6,7 +6,7 @@
 #    By: bschroed <bschroed@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/05 14:04:01 by bschroed          #+#    #+#              #
-#    Updated: 2017/02/05 12:42:03 by bschroed         ###   ########.fr        #
+#    Updated: 2017/02/13 20:57:04 by bschroed         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,23 +93,23 @@ COUNTER		= $(words $n)$(eval n := $(call increment, $n))
 all: $(NAME)
 
 $(OBJ): %.o: %.c
-	@printf "$(YELLOW)\r-> COMPILING: [$(GREEN)%d$(YELLOW)/$(GREEN)%d$(YELLOW)]" $(COUNTER) $(MAX)
+	@printf "$(YELLOW)\r>>COMPILING: [$(GREEN)%d$(YELLOW)/$(GREEN)%d$(YELLOW)]" $(COUNTER) $(MAX)
 	@$(CC) -c $(CFLAGS) $< -o $@
 
 $(NAME): $(OBJ)
 	@printf "\n"
-	@echo "$(YELLOW)-> CREATING LIBRARY...$(NO_COLOR)"
+	@echo "$(YELLOW)>>CREATING LIBRARY...$(NO_COLOR)"
 	@ar rcs $@ $+
-	@echo "$(GREEN)-> DONE!"
+	@echo "$(GREEN)>>DONE!"
 
 clean:
-	@echo "$(RED)-> DELETING OBJECT FILES..."
+	@echo "$(RED)>>DELETING OBJECT FILES..."
 	@rm -f $(OBJ)
-	@echo "$(GREEN)-> DONE!"
+	@echo "$(GREEN)>>DONE!"
 fclean: clean
-	@echo "$(RED)-> DELETING $(NAME)"
+	@echo "$(RED)>>DELETING $(NAME)"
 	@rm -f $(NAME)
-	@echo "$(GREEN)-> DONE!"
+	@echo "$(GREEN)>>DONE!"
 re: fclean all
 
 .PHONY: all clean fclean re
